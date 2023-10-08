@@ -8,9 +8,14 @@ import { DataComponent } from './data/data.component';
 import { DatatableComponent } from './datatable/datatable.component';
 import { DataEditComponent } from './data-edit/data-edit.component';
 import { AppRoutingModule } from './app-routing.module';
+import { ReactiveFormsModule } from '@angular/forms';
 
 
-const routes: Routes =[]
+const routes: Routes =[
+  { path: '', redirectTo: 'table', pathMatch: 'full' },
+  { path: 'add', component: DataEditComponent },
+  { path: 'table', component: DatatableComponent }
+]
 
 @NgModule({
   declarations: [
@@ -23,7 +28,8 @@ const routes: Routes =[]
   imports: [
     BrowserModule,
     RouterModule.forRoot(routes),
-    AppRoutingModule
+    AppRoutingModule,
+    ReactiveFormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
