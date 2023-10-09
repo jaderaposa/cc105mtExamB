@@ -10,7 +10,6 @@ import { Data } from '../data.model';
 })
 export class DataComponent {
 
-  memberName = "Jade";
   constructor(private dataService: DataService, private router: Router, private actRoute: ActivatedRoute){}
 
   @Input() index: number = 0;
