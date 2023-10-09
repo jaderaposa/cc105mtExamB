@@ -1,20 +1,19 @@
-<tbody>
-    <tr>
-      <th scope="row">1</th>
-      <td>Mark</td>
-      <td>Otto</td>
-      <td>30</td>
-    </tr>
-    <tr>
-      <th scope="row">2</th>
-      <td>Jacob</td>
-      <td>Thornton</td>
-      <td>28</td>
-    </tr>
-    <tr>
-      <th scope="row">3</th>
-      <td>Larry</td>
-      <td>the Bird</td>
-      <td>25</td>
-    </tr>
-</tbody>
+<div class="">
+<table class="table align-middle">
+  <tbody>
+      <tr>
+        <td>{{data?.id}}</td>
+        <td>{{data?.name}}</td>
+        <td>{{data?.brand}}</td>
+        <td>{{data?.color}}</td>
+        <td>{{data?.price}}</td>
+        <td><img class="img-responsive" src={{data?.image}} width="200" height="100"></td>
+        <td>{{data?.status}}</td>
+        <td>
+          <button class="btn btn-primary" (click)="onEdit()">Edit</button>
+          <button class="btn btn-danger" (click)="delete()" >Delete</button>
+        </td>
+      </tr>
+  </tbody>
+</table>
+</div>
