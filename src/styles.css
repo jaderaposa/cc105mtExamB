@@ -1,4 +1,45 @@
+body {
+    overflow: hidden;
+}
+
 h2 {
+    margin-top: 2rem;
     margin-bottom: 2rem;
     text-align: center;
 }
+
+th {
+    font-weight: normal;
+    font-size: 1.5rem;
+    background-color: rgb(61, 61, 61) !important;
+    color: white !important;
+}
+
+.equal-width{
+    width: 12.5%;
+}
+
+.button-container {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    margin: 0 28px;
+}
+
+.out-of-stock {
+    background-color: red;
+    border: 2px solid black;
+    border-radius: 10px;
+    padding: 10px;
+    color: white;
+}
+
+.available {
+    background-color: green;
+    border: 2px solid black;
+    border-radius: 10px;
+    padding: 10px;
+    color: white;
+}
+  
+  

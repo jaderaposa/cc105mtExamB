@@ -1,19 +1,22 @@
-<div class="">
-<table class="table align-middle">
+<table class="table table-bordered align-middle">
   <tbody>
       <tr>
-        <td>{{data?.id}}</td>
-        <td>{{data?.name}}</td>
-        <td>{{data?.brand}}</td>
-        <td>{{data?.color}}</td>
-        <td>{{data?.price}}</td>
-        <td><img class="img-responsive" src={{data?.image}} width="200" height="100"></td>
-        <td>{{data?.status}}</td>
-        <td>
-          <button class="btn btn-primary" (click)="onEdit()">Edit</button>
-          <button class="btn btn-danger" (click)="delete()" >Delete</button>
+        <td class="equal-width text-center">{{data?.id}}</td>
+        <td class="equal-width text-center">{{data?.name}}</td>
+        <td class="equal-width text-center">{{data?.brand}}</td>
+        <td class="equal-width text-center">{{data?.color}}</td>
+        <td class="equal-width text-center">₱{{data?.price}}</td>
+        <td class="equal-width text-center"><div><img class="img-responsive" src="{{data?.image}}" style="width: 100%;height: 150px;border-radius: 10%;"></div></td>
+
+        <td *ngIf="data?.status=='Out Of Stock'" class="equal-width text-center"><span class="out-of-stock">{{data?.status}}</span></td>
+        <td *ngIf="data?.status=='Available'" class="equal-width text-center"><span class="available">{{data?.status}}</span></td>
+
+        <td class="equal-width text-center">
+          <div class="button-container">
+            <button class="btn btn-primary" (click)="onEdit()"><i class="fas fa-edit"></i></button>
+            <button class="btn btn-danger" (click)="delete()"><i class="fas fa-trash"></i></button>
+          </div>
         </td>
       </tr>
   </tbody>
 </table>
-</div>

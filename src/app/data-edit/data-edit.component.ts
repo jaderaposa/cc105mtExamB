@@ -3,6 +3,7 @@ import { ActivatedRoute, Params, Router } from '@angular/router';
 import { DataService } from '../data.service';
 import { FormControl, FormGroup, Validators } from '@angular/forms';
 import { Data } from '../data.model';
+import { v4 as uuid } from 'uuid';
 
 @Component({
   selector: 'app-data-edit',
@@ -19,7 +20,7 @@ export class DataEditComponent {
 
   ngOnInit(): void {
 
-    let editId = '';
+    let editId = uuid();
     let editName = '';
     let editBrand = '';
     let editColor = '';
