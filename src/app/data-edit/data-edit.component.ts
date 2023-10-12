@@ -74,11 +74,11 @@ export class DataEditComponent {
       const data: Data = new Data(id, name, brand, color , price, image, status
       );
 
-    if(this.editMode){
-      this.dataService.updatePost(this.index, data) //uni man maga update//
+    if(this.editMode===false){
+      this.dataService.addPost(data)  //maga add digdi//
     }
     else{
-      this.dataService.addPost(data) //maga add digdi//
+      this.dataService.updatePost(this.index, data)   //uni man maga update//
     }
 
    
